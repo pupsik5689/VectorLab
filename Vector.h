@@ -5,7 +5,7 @@ template<class T>
 class TVector
 {
 public:
-  //TVector();
+  TVector();
   TVector(int n, T v);
   TVector(int n = 1);
   TVector(TVector<T>& p);
@@ -37,6 +37,13 @@ protected:
   int len;
   T* data;
 };
+
+template<class T>
+inline TVector<T>::TVector()
+{
+  data = 0;
+  len = 0;
+}
 
 template<class T>
 inline TVector<T>::TVector(int n, T v)
